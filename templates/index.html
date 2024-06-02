@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraping App</title>
+</head>
+<body>
+    <h1>Scraping App</h1>
+    <h2>Click the below button to run the script that can read the Twitter home page and fetch the top 5 trending topics under “What’s Happening” section from the homepage. </h2>
+    <form action="/scrape" method="post">
+        <button type="submit">Scrape Data</button>
+    </form>
+    
+    <div>
+        <h2>These are the most happening topics as on : {{ trend.date }} </h2>
+        <ol>
+        <li>{{ trend.nameoftrend1 }}</li>
+        <li>{{ trend.nameoftrend2 }}</li>
+        <li>{{ trend.nameoftrend3 }}</li>
+        <li>{{ trend.nameoftrend4 }}</li>
+        <li>{{ trend.nameoftrend5 }}</li>
+        </ol>
+        <h3>IP Address used for this query was : {{ trend.ip_address }} </h3>
+    </div>
+    <h2> Here’s a JSON extract of this record from the MongoDB: </h2>
+    <pre>{{ trend | tojson(indent=4) }}</pre>
+</body>
+</html>
