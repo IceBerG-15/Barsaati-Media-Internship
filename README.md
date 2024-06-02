@@ -63,3 +63,5 @@ Click the "Scrape Data" button to trigger the scraping process.
 
 Once the scraping is complete, the trending topics will be displayed on the webpage.
 
+## Screenshot
+![Project picture](screenshots/image.png)
