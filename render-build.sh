@@ -4,7 +4,9 @@
 echo "Installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -x google-chrome-stable_current_amd64.deb /tmp/google-chrome
-cp /tmp/google-chrome/opt/google/chrome/chrome /usr/local/bin/
+mkdir -p /opt/google/chrome
+cp -r /tmp/google-chrome/opt/google/chrome/* /opt/google/chrome/
+ln -s /opt/google/chrome/google-chrome /usr/local/bin/google-chrome
 
 # Install Chromedriver
 echo "Installing Chromedriver"
