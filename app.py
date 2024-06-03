@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
 
-load_dotenv("baraathi internshalla\\.env")
+load_dotenv(".env")
 
 app = Flask(__name__)
 
