@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # MongoDB connection
-client = MongoClient(os.getenv('MONGODB_URI')
+client = MongoClient(os.getenv('MONGODB_URI'))
 db = client.twitter_trends
 collection = db.trends
 
