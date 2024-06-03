@@ -11,11 +11,13 @@ from pymongo import MongoClient  # For MongoDB interaction
 import datetime  # For working with date and time
 from dotenv import load_dotenv
 import os
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 # Replace with the correct path to ChromeDriver
 driver_path = "N:\\chromedriver\\chromedriver.exe"
 
-load_dotenv("baraathi internshalla\\.env")
+load_dotenv(".env")
 
 # Replace with your ProxyMesh credentials
 proxymesh_user = os.getenv('proxymesh_user')
@@ -52,9 +54,9 @@ def get_driver(proxy_ip):
         
         capabilities = webdriver.DesiredCapabilities.CHROME.copy()
         capabilities['proxy'] = prox.to_capabilities()
-        driver = webdriver.Chrome(service=Service(executable_path=driver_path), options=chrome_options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     else:
-        driver = webdriver.Chrome(service=Service(executable_path=driver_path), options=chrome_options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     
     return driver
 
