@@ -16,7 +16,7 @@ mv /tmp/chromedriver /usr/local/bin/
 chmod +x /usr/local/bin/chromedriver
 
 # Update PATH environment variable
-export PATH=$PATH:/usr/local/bin/chrome/opt/google/chrome/
+
 
 # Clean up
 rm google-chrome-stable_current_amd64.deb
