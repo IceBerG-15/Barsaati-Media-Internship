@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 from twitter_scrapping import main as run_scraper
 from pymongo import MongoClient
+import os
 
 app = Flask(__name__)
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.getENV('MONGODB_URI'))
 db = client.twitter_trends
 collection = db.trends
 
