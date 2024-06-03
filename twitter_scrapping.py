@@ -14,9 +14,6 @@ import os
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-# Replace with the correct path to ChromeDriver
-driver_path = "N:\\chromedriver\\chromedriver.exe"
-
 load_dotenv(".env")
 
 # Replace with your ProxyMesh credentials
