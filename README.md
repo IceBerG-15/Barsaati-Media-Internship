@@ -50,6 +50,7 @@ proxymesh_pass=your_proxymesh_password
 X_EMAIL=your_twitter_email
 X_PASS=your_twitter_password
 X_USER=your_twitter_username
+MONGODB_URI=your_mongodb_uri
 ```
 Usage
 Run the Flask application:
