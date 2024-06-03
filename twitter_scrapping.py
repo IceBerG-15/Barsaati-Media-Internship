@@ -44,7 +44,7 @@ def get_driver(proxy_ip):
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--disable-web-security')
     chrome_options.add_argument("--start-maximized")
-    chrome_options.binary_location = "/opt/google/chrome/google-chrome"
+    chrome_options.binary_location = "/usr/local/bin/chrome/opt/google/chrome/chrome"
     
     if proxy_ip:
         prox = Proxy()
