@@ -27,7 +27,7 @@ X_PASS = os.getenv('X_PASS')
 X_USER = os.getenv('X_USER')
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.getenv('MONGODB_URI'))
 db = client.twitter_trends
 collection = db.trends
 
