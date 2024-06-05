@@ -22,11 +22,7 @@ collection = db.trends
 def index():
     # Retrieve data from MongoDB
     trending_data = collection.find(sort=[('date', -1)], projection={'_id': False})
-    if trending_data:
-        trend = trending_data[0]
-    else:
-        trend = None
-    return render_template('index.html', trend=trend)
+    return render_template('index.html', trend=trending_data[0)
 
 @app.route('/scrape', methods=['POST'])
 def scrape():
