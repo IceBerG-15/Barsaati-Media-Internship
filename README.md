@@ -5,6 +5,8 @@ Barsaati Media Internshalla Internship Task.
 This repository contains a Flask web application for scraping and displaying the top 5 trending topics from Twitter's homepage under the "What’s Happening" section.
 The project was completed as part of an internship task given by Barsaati Media and Tech.
 
+## Demo Video Link: https://drive.google.com/file/d/1R8p49mSGiTYbhJZs9q8miGdQBxHtk_fN/view
+
 ## Technologies Used:
 1. Flask: Flask is a micro web framework written in Python. It is used to build the web application and define routes for handling HTTP requests.
 2. Selenium: Selenium is a popular tool for automating web browsers. In this project, it is used for web scraping to interact with the Twitter website and extract trending topics.
